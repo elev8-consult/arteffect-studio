@@ -23,10 +23,12 @@ This studio is configured for `pnpm` and includes a local `vercel.json` that for
 
 Required Vercel environment variables:
 
-- `SANITY_STUDIO_PROJECT_ID`
+- `SANITY_STUDIO_PROJECT_ID` required for every deploy
 - `SANITY_STUDIO_DATASET`
 - `SANITY_STUDIO_API_VERSION` for seed scripts
 - `SANITY_STUDIO_API_TOKEN` if seed or authenticated API usage is needed at build time
+
+If `SANITY_STUDIO_PROJECT_ID` is missing, the build is expected to fail early. This is intentional, so Vercel does not publish a broken Studio bundle.
 
 ## Environment
 
