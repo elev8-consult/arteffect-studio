@@ -1,0 +1,19 @@
+{
+  "framework": null,
+  "installCommand": "CI=1 pnpm install --frozen-lockfile",
+  "buildCommand": "CI=1 NO_UPDATE_NOTIFIER=1 pnpm build",
+  "outputDirectory": "dist",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/preview/(.*)",
+      "dest": "/preview/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
