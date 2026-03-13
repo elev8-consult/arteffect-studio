@@ -16,7 +16,7 @@ Studio runs on `http://localhost:3339`.
 
 This studio is configured for `pnpm` and includes a local `vercel.json` that forces:
 
-- `CI=1 pnpm install --frozen-lockfile`
+- `CI=1 pnpm install`
 - `CI=1 NO_UPDATE_NOTIFIER=1 pnpm build`
 - `dist` as the output directory
 - Node.js `24.x`
