@@ -1,11 +1,11 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 
-import {schemaTypes} from './schemaTypes'
-import {deskStructure} from './src/deskStructure'
-import {getStudioEnv} from './src/env'
+import {schemaTypes} from './schemaTypes/index.ts'
+import {deskStructure} from './src/deskStructure.ts'
 
-const {dataset, projectId} = getStudioEnv()
+const projectId = process.env.SANITY_STUDIO_PROJECT_ID || ''
+const dataset = process.env.SANITY_STUDIO_DATASET || 'production'
 
 export default defineConfig({
   name: 'default',
